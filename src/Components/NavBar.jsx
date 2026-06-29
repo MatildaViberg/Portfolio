@@ -34,8 +34,16 @@ export function NavBar() {
   return (
     <header className="">
       <div className="flex justify-between items-center w-full h-20 px-4 text-white bg-black fixed">
-        <div><Link to="home"><a className="text-4xl font-signature ml-2 cursor-pointer">Matilda Viberg</a></Link>
+
+        <div>
+          <Link
+            to="home"
+            className="text-4xl font-signature ml-2 cursor-pointer"
+          >
+            Matilda Viberg
+          </Link>
         </div>
+
         <ul className="hidden md:flex">
           {links.map(({ id, link }) => (
             <li
