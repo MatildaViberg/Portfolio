@@ -13,6 +13,10 @@ export function Home() {
     <div className="min-h-screen w-full bg-gradient-to-b from-[#1B0227] to-black flex items-center justify-center">
       <div className="max-w-4xl mx-auto px-6 flex flex-col items-start gap-6">
 
+        <p className="uppercase tracking-widest text-sm text-white">
+          Matilda Viberg
+        </p>
+
         <h1 className="text-3xl md:text-5xl lg:text-6xl font-semibold text-white leading-tight tracking-tight max-w-3xl">
           UX Designer focused on
           <span className="block text-fuchsia-400 mt-3 font-medium">

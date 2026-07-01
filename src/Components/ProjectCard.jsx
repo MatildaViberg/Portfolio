@@ -36,8 +36,11 @@ export default function ProjectCard({ project }) {
     border border-neutral-800/80 
     rounded-2xl overflow-hidden 
     hover:border-neutral-700 
-    hover:shadow-xl hover:shadow-purple-900/20 
-    transition-all duration-500 cursor-pointer
+    hover:scale-105 
+    hover:-translate-y-1  
+    hover:shadow-lg hover:shadow-black/40
+    transition-all duration-200 
+    cursor-pointer
     ${featured ? "lg:flex lg:col-span-2" : ""}
   `;
 
@@ -54,14 +57,14 @@ export default function ProjectCard({ project }) {
         <img
           src={casesImg}
           alt={`${title} project preview`}
-          className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
+          className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105 group-hover:brightness-110"
         />
         <div className="absolute inset-0 bg-black/20 group-hover:bg-black/5 transition duration-500" />
       </div>
 
       {/* CONTENT */}
       <div
-        className={`p-6 sm:p-8 flex flex-col justify-between ${featured ? "lg:w-2/5" : ""
+        className={`p-6 sm:p-8 flex flex-col justify-between gap-6 ${featured ? "lg:w-2/5" : ""
           }`}
       >
         <div>
@@ -79,7 +82,7 @@ export default function ProjectCard({ project }) {
               {tags.slice(0, 3).map((tag, idx) => (
                 <span
                   key={idx}
-                  className="text-[10px] uppercase tracking-wide text-purple-300"
+                  className="text-xs uppercase tracking-wide text-purple-300/80"
                 >
                   {tag}
                 </span>
@@ -89,7 +92,7 @@ export default function ProjectCard({ project }) {
 
           {/* TITLE */}
           <h3
-            className={`font-semibold text-white group-hover:text-purple-300 transition-colors mb-3 ${featured ? "text-3xl" : "text-xl"
+            className={`font-semibold text-white group-hover:text-purple-200 leading-snug transition-colors mb-3 ${featured ? "text-3xl" : "text-xl"
               }`}
           >
             {title}
@@ -103,9 +106,9 @@ export default function ProjectCard({ project }) {
 
         {/* CTA */}
         <div className="mt-6 flex items-center gap-2 text-sm text-purple-400 font-medium group-hover:text-purple-300 transition-colors">
-          <span>{internalLink ? "Read case study" : "View project"}</span>
+          <span>{internalLink ? "View case study" : "View live project"}</span>
           {internalLink ? (
-            <HiArrowRight className="transition-transform group-hover:translate-x-1.5" />
+            <HiArrowRight className="transition-transform group-hover:translate-x-1 transition-transform duration-200 ease-out" />
           ) : (
             <HiExternalLink className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
           )}

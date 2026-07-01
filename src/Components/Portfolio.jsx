@@ -5,8 +5,8 @@ import ProjectCard from "./ProjectCard";
 import Thesis from "../images/CasesCoverImg/Thesis.png";
 import AI4UX from "../images/CasesCoverImg/SwedenCompanion.jpg";
 import Vitalit from "../images/CasesCoverImg/vitalit.png";
-import Arvered from "../images/CasesCoverImg/arvered.png";
 import Matematikgeneratorn from "../images/CasesCoverImg/matte.png";
+import Nana from "../images/Nana/heronana.jpg";
 
 export default function Portfolio() {
   const featuredProject = {
@@ -23,9 +23,9 @@ export default function Portfolio() {
   const portfolios = [
     {
       id: "ai4ux",
-      title: "AI4UX – AI in Design Workflows",
+      title: "AI in UX workflows: improving ideation and decision-making",
       description:
-        "Exploring how AI can support UX workflows through ideation, prototyping, and decision-making. Focused on understanding the balance between automation and human creativity in design processes.",
+        "Investigated how AI can support UX workflows in ideation and decision-making. Developed and tested concepts for integrating AI tools into design processes, focusing on balancing automation with human creativity.",
       casesImg: AI4UX,
       internalLink: "/ai4ux",
       tags: ["AI & Design", "UX Research", "Interaction Design"],
@@ -50,12 +50,12 @@ export default function Portfolio() {
     },
     {
       id: "nana",
-      title: "Nana – Branding & Visual Storytelling",
+      title: "Nana – Concept design for festival safety and social interaction",
       description:
-        "A creative project exploring brand identity, visual design, and storytelling through graphic production and filmmaking. Focused on creating a cohesive and expressive visual language.",
-      casesImg: Arvered,
+        "Concept design project focused on safety and social interaction at festivals. The project explores how a wearable band could help users locate friends and reduce uncertainty in crowded environments, combining early interaction ideas with a cohesive visual identity",
+      casesImg: Nana,
       internalLink: "/nana",
-      tags: ["Branding", "Visual Design", "Storytelling"],
+      tags: ["UX-concept", "User-centred Design", "Brand & Interaction"],
     },
   ];
 

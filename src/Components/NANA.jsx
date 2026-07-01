@@ -1,18 +1,28 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-export default function NANA() {
+// 👉 Add your images here
+import Hero from "../images/Nana/heronana.jpg";
+import Wristband from "../images/Nana/bandlogo.png";
+import Posters from "../images/Nana/nana_poster_final.jpg";
+
+import Compact from "../images/Nana/compact.jpg";
+import GraphicProfile from "../images/Nana/graphicprofile.jpg";
+import Typography from "../images/Nana/typography.jpg";
+import Moodboard from "../images/Nana/nana_pastell.jpeg";
+import Instagram from "../images/Nana/instagramnana.jpg";
+import Flag from "../images/Nana/nana_flagga.jpg";
+import Maner from "../images/Nana/instagram.jpg"
+
+
+export default function Nana() {
     const navigate = useNavigate();
 
-    const body1 = `A auctor sodales tortor purus. Turpis posuere porttitor fermentum rhoncus nunc risus. Sapien facilisi quis id gravida viverra enim lorem. Tincidunt tempor sit egestas ac. Turpis eget quam amet nunc scelerisque lectus suspendisse consequat. Amet aliquam nunc placerat et nisl mattis id praesent etiam. Adipiscing a proin elementum eget scelerisque quisque purus. Mauris nunc ut eget et magna massa vivamus lacus pharetra. Ac cras dui nulla mattis cursus sit pellentesque adipiscing. Dolor leo varius nunc libero cursus eu a orci. Facilisis scelerisque sed bibendum aliquet vulputate semper vel justo massa. Tempus arcu sit pellentesque varius eu ipsum eros. Ultrices viverra ultrices augue faucibus commodo diam accumsan risus. Etiam nullam ultricies eget viverra et aliquet purus sit. Nibh suspendisse vivamus amet enim.`;
-
-    const body2 = `A auctor sodales tortor purus. Turpis posuere porttitor fermentum rhoncus nunc risus. Sapien facilisi quis id gravida viverra enim lorem. Tincidunt tempor sit egestas ac. Turpis eget quam amet nunc scelerisque lectus suspendisse consequat. Amet aliquam nunc placerat et nisl mattis id praesent etiam. Adipiscing a proin elementum eget scelerisque quisque purus. Mauris nunc ut eget et magna massa vivamus lacus pharetra. Ac cras dui nulla mattis cursus sit pellentesque adipiscing. Dolor leo varius nunc libero cursus eu a orci. Facilisis scelerisque sed bibendum aliquet vulputate semper vel justo massa. Tempus arcu sit pellentesque varius eu ipsum eros. Ultrices viverra ultrices augue faucibus commodo diam accumsan risus. Etiam nullam ultricies eget viverra et aliquet purus sit. Nibh suspendisse vivamus amet enim.`;
-
     return (
-        <div className="min-h-screen bg-gradient-to-b from-[#1B0227] to-black text-white">
+        <div className="min-h-screen bg-black text-white">
 
             {/* ── Back button ── */}
-            <div className="max-w-screen-lg mx-auto px-8 pt-8">
+            <div className="max-w-3xl mx-auto px-6 pt-8">
                 <button
                     onClick={() => navigate("/")}
                     className="flex items-center gap-2 text-gray-400 hover:text-white duration-200 hover:scale-105 text-sm"
@@ -21,52 +31,170 @@ export default function NANA() {
                 </button>
             </div>
 
-            <div className="max-w-screen-lg mx-auto px-8 pb-24">
+            <div className="max-w-3xl mx-auto px-6 py-20 space-y-24">
 
-                {/* ── Title ── */}
-                <h1 className="text-6xl font-bold mt-8 mb-12 tracking-tight">Nānā</h1>
+                {/* HERO */}
+                <section className="space-y-6">
+                    <h1 className="text-4xl sm:text-5xl font-bold tracking-tight">
+                        Nana
+                    </h1>
 
-                {/* ── Hero image (full width) ── */}
-                <div className="w-full h-72 sm:h-96 bg-white/10 rounded-2xl border border-white/10 flex items-center justify-center mb-12">
-                    <span className="text-gray-500 text-sm">Image</span>
-                </div>
+                    <p className="text-purple-400 text-sm tracking-wide">
+                        Concept Design · User-Centred Design · Brand & Interaction
+                    </p>
 
-                {/* ── Two-column text ── */}
-                <div className="grid sm:grid-cols-2 gap-10 mb-16">
-                    <p className="text-gray-300 leading-relaxed text-sm">{body1}</p>
-                    <p className="text-gray-300 leading-relaxed text-sm">{body2}</p>
-                </div>
+                    <p className="text-xl text-gray-400 leading-relaxed">
+                        Exploring how a wearable concept could support safety and social
+                        interaction at large music festivals.
+                    </p>
 
-                {/* ── Image left, text right ── */}
-                <div className="grid sm:grid-cols-2 gap-10 items-center mb-16">
-                    <div className="w-full h-64 bg-white/10 rounded-2xl border border-white/10 flex items-center justify-center">
-                        <span className="text-gray-500 text-sm">Image</span>
+                    <img
+                        src={Hero}
+                        alt="Nana festival band concept"
+                        className="rounded-xl w-full object-cover"
+                    />
+                </section>
+
+                {/* OVERVIEW */}
+                <section className="space-y-4">
+                    <h2 className="text-2xl font-semibold">Overview</h2>
+
+                    <p className="text-gray-300 leading-relaxed">
+                        Nana is a concept design project focused on how technology could support
+                        safety and social interaction at large festivals. The idea was developed
+                        from a relatable challenge: losing track of friends in crowded environments.
+                    </p>
+
+                    <p className="text-gray-300 leading-relaxed">
+                        The concept proposes a wearable festival band connected to a mobile system,
+                        allowing users to locate friends and feel more secure throughout an event.
+                    </p>
+                </section>
+
+                {/* CHALLENGE */}
+                <section className="space-y-4">
+                    <h2 className="text-2xl font-semibold">The Challenge</h2>
+
+                    <p className="text-gray-300 leading-relaxed">
+                        The project started with an open ideation phase, exploring different
+                        possible directions. The concept of a GPS-enabled festival band was
+                        selected based on its relevance to a target group that frequently
+                        experiences uncertainty at large events.
+                    </p>
+
+                    <p className="text-gray-300 leading-relaxed">
+                        A key challenge was translating an abstract idea into something concrete
+                        and understandable, without developing a fully functional system.
+                    </p>
+                </section>
+
+                {/* PROCESS */}
+                <section className="space-y-12">
+                    <h2 className="text-2xl font-semibold">Process</h2>
+
+                    <div className="space-y-4">
+                        <h3 className="text-lg font-semibold">
+                            Concept development through ideation
+                        </h3>
+                        <p className="text-gray-300 leading-relaxed">
+                            Moodboards and value-based exploration were used to define the visual
+                            direction. The goal was to create a brand that reflected feelings of
+                            connection, safety, and ease of use.
+                        </p>
+                        <img src={Moodboard} alt="Nana moodboard" className="rounded-xl w-full object-cover" />
+
+                        <p className="text-gray-300 leading-relaxed">
+                            The concept was developed through brainstorming and idea selection,
+                            focusing on solutions that felt relevant and relatable.
+                        </p>
                     </div>
-                    <p className="text-gray-300 leading-relaxed text-sm">{body1}</p>
-                </div>
 
-                {/* ── Text left, image right ── */}
-                <div className="grid sm:grid-cols-2 gap-10 items-center mb-16">
-                    <p className="text-gray-300 leading-relaxed text-sm">{body2}</p>
-                    <div className="w-full h-64 bg-white/10 rounded-2xl border border-white/10 flex items-center justify-center">
-                        <span className="text-gray-500 text-sm">Image</span>
-                    </div>
-                </div>
 
-                {/* ── Two images side by side ── */}
-                <div className="grid sm:grid-cols-2 gap-6 mb-16">
-                    <div className="w-full h-56 bg-white/10 rounded-2xl border border-white/10 flex items-center justify-center">
-                        <span className="text-gray-500 text-sm">Image</span>
-                    </div>
-                    <div className="w-full h-56 bg-white/10 rounded-2xl border border-white/10 flex items-center justify-center">
-                        <span className="text-gray-500 text-sm">Image</span>
-                    </div>
-                </div>
+                    <div className="space-y-4">
+                        <h3 className="text-lg font-semibold">
+                            Visual exploration and identity
+                        </h3>
+                        <img src={Posters} alt="Nana posters" className="rounded-xl w-full object-cover" />
+                        <img
+                            src={Wristband}
+                            alt="Festival wristband mockup"
+                            className="rounded-xl w-full object-cover"
+                        />
 
-                {/* ── Full-width closing image ── */}
-                <div className="w-full h-72 sm:h-96 bg-white/10 rounded-2xl border border-white/10 flex items-center justify-center">
-                    <span className="text-gray-500 text-sm">Image</span>
-                </div>
+
+                    </div>
+                </section>
+
+                {/* OUTCOME */}
+                <section className="space-y-6">
+                    <h2 className="text-2xl font-semibold">Outcome</h2>
+
+
+                    <p className="text-gray-300 leading-relaxed max-w-2xl">
+                        The final outcome is a fictional product and visual identity that communicates how the concept
+                        could function in a real-world festival context. The design focuses on clarity, recognition,
+                        and usability, supporting the idea of safety and connection between users.
+                    </p>
+
+                    {/* IMAGE 1 — Concept communication */}
+                    <div className="space-y-4">
+                        <img src={Compact} alt="Nana compact" className="rounded-xl w-full object-cover" />
+
+                        <p className="text-gray-400 text-sm max-w-xl">
+                            The identity explores different logo variations and applications, emphasising clarity and recognisability across contexts.
+                        </p>
+                    </div>
+
+                    {/* IMAGE 2 — Identity system */}
+                    <div className="space-y-4">
+                        <img src={GraphicProfile} alt="Nana graphic profile" className="rounded-xl w-full object-cover" />
+
+                        <p className="text-gray-400 text-sm max-w-xl">
+                            A consistent visual system was developed, including logo variations and iconography, to support a cohesive experience across touchpoints.
+                        </p>
+                    </div>
+
+                    {/* IMAGE 3 — Typography + colour */}
+                    <div className="space-y-4">
+                        <img src={Typography} alt="Nana typography" className="rounded-xl w-full object-cover" />
+
+                        <p className="text-gray-400 text-sm max-w-xl">
+                            Typography and colour choices were guided by the intention to create a friendly, accessible, and trustworthy visual language.
+                        </p>
+                    </div>
+
+                    <p className="text-gray-400 italic max-w-xl">
+                        Although conceptual, the project demonstrates how visual design can support interaction ideas and make abstract concepts tangible.
+                    </p>
+                </section>
+                <section className="space-y-6">
+                    <h2 className="text-2xl font-semibold">
+                        Visual Identity Summary
+                    </h2>
+
+                    <p className="text-gray-300 leading-relaxed max-w-xl">
+                        The final visual identity brings together colour, typography, and form into a cohesive system.
+                        The goal was to create a clear and recognisable expression that feels approachable.
+                        To make the full concept feel real and actual we decided to create a graphic profile that could be used on different platforms.
+                        We created templates for posters, Instagram posts, and wristbands to show how the concept could work in a real-world festival context.
+                    </p>
+
+                    <div className="grid sm:grid-cols-2 gap-6">
+                        <img
+                            src={Instagram}
+                            alt="Nana logo variations and identity system"
+                            className="rounded-xl w-full object-cover"
+                        />
+
+                        <img
+                            src={Maner}
+                            alt="Nana typography and colour palette"
+                            className="rounded-xl w-full object-cover"
+                        />
+                    </div>
+                </section>
+
+
 
             </div>
         </div>
