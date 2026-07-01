@@ -4,11 +4,11 @@ import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 
 
-  
 
-export default function Contact(){
+
+export default function Contact() {
   const links = [
-    
+
     {
       id: 1,
       child: (
@@ -22,12 +22,13 @@ export default function Contact(){
       id: 2,
       child: (
         <>
-          Download resume <BsFillPersonLinesFill size={30} />
+          My resume <BsFillPersonLinesFill size={30} />
         </>
       ),
-      href: "/matilda.viberg.resume.pdf",
+      href: "/CVMatildaViberg.pdf",
       style: "rounded-br-md",
-      download: true,
+      target: "_blank",
+      rel: "noopener noreferrer",
     },
     {
       id: 3,
@@ -42,15 +43,15 @@ export default function Contact(){
   ];
   return (
     <section className="bg-gradient-to-b from-black to-gray-800 w-full text-white py-24" name="contact"
-   
->
-<div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center items-center  md:w-1/2">
-            
-            <div className="pb-8 ">
-                <p className="text-4xl text-white font-bold inline border-b-4 border-gray-700">Contact</p>
-            </div>
 
-             
+    >
+      <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center items-center  md:w-1/2">
+
+        <div className="pb-8 ">
+          <p className="text-4xl text-white font-bold inline border-b-4 border-gray-700">Contact</p>
+        </div>
+
+
         {links.map(({ id, child, href, style, download }) => (
           <li
             key={id}
@@ -71,10 +72,10 @@ export default function Contact(){
             </a>
           </li>
         ))}
-    
-    
-    </div>
-      
+
+
+      </div>
+
     </section>
   );
 };

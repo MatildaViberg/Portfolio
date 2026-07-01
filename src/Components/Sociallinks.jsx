@@ -28,12 +28,13 @@ const SocialLinks = () => {
       id: 3,
       child: (
         <>
-          Resume <BsFillPersonLinesFill size={30} />
+          Resume ↗ <BsFillPersonLinesFill size={30} />
         </>
       ),
-      href: "/matilda.viberg.resume.pdf",
+      href: "/CVMatildaViberg.pdf",
       style: "rounded-br-md",
-      download: true,
+      target: "_blank",
+      rel: "noopener noreferrer",
     },
   ];
 

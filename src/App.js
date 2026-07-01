@@ -15,10 +15,12 @@ import AI4UX from "./Components/AI4UX";
 import Matematikgeneratorn from "./Components/Matematikgeneratorn";
 import Nana from "./Components/NANA";
 import Thesis from "./Components/Thesis";
+import ScrollToTop from "./Components/ScrollToTop";
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         {/* Main portfolio page */}
         <Route
