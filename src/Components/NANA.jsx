@@ -24,7 +24,7 @@ export default function NANA() {
             <div className="max-w-screen-lg mx-auto px-8 pb-24">
 
                 {/* ── Title ── */}
-                <h1 className="text-6xl font-bold mt-8 mb-12 tracking-tight">AI4UX</h1>
+                <h1 className="text-6xl font-bold mt-8 mb-12 tracking-tight">Nānā</h1>
 
                 {/* ── Hero image (full width) ── */}
                 <div className="w-full h-72 sm:h-96 bg-white/10 rounded-2xl border border-white/10 flex items-center justify-center mb-12">

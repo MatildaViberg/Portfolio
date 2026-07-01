@@ -60,7 +60,7 @@ export default function Portfolio() {
   ];
 
   return (
-    <div className="bg-gradient-to-b to-black from-[#1B0227] w-full text-white py-24">
+    <div name="work" className="bg-gradient-to-b to-black from-[#1B0227] w-full text-white py-24">
       <div className="max-w-screen-lg px-8 mx-auto flex flex-col w-full">
 
         {/* Header */}

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 
 
 
@@ -38,6 +38,8 @@ export function NavBar() {
         <div>
           <Link
             to="home"
+            smooth={true}
+            duration={500}
             className="text-4xl font-signature ml-2 cursor-pointer"
           >
             Matilda Viberg

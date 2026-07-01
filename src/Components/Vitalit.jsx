@@ -19,6 +19,7 @@ export default function Vitalit() {
                 >
                     ← Back to Portfolio
                 </button>
+
             </div>
 
             <div className="max-w-screen-lg mx-auto px-8 pb-24">
