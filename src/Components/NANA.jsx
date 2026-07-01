@@ -120,6 +120,12 @@ export default function Nana() {
                             alt="Festival wristband mockup"
                             className="rounded-xl w-full object-cover"
                         />
+                        <img
+                            src={Flag}
+                            alt="Nana flagga"
+                            className="rounded-xl w-full object-cover"
+                        />
+
 
 
                     </div>
