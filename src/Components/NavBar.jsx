@@ -33,7 +33,7 @@ export function NavBar() {
   ]
   return (
     <header className="">
-      <div className="fixed top-0 w-full h-20 px-6 md:px-12 flex justify-between items-center text-white backdrop-blur-md bg-black/30 z-5">
+      <div className="fixed top-0 w-full h-20 px-6 md:px-12 flex justify-between items-center text-white backdrop-blur-md bg-black/30 z-50">
 
         <div>
           <Link
