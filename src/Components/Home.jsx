@@ -10,9 +10,9 @@ import { Button } from "./Button";
 export function Home() {
   return (
 
-    <div className="min-h-screen w-full bg-gradient-to-b from-[#1B0227] to-black flex items-center justify-center">
-      <div className="max-w-4xl mx-auto px-6 flex flex-col items-start gap-6">
+    <div className="min-h-[85vh] w-full bg-gradient-to-b from-[#1B0227] to-black flex items-center justify-center">
 
+      <div className="max-w-4xl mx-auto px-6 pt-24 flex flex-col items-start gap-6">
         <p className="uppercase tracking-widest text-sm text-white">
           Matilda Viberg
         </p>
