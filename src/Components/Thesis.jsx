@@ -1,13 +1,73 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-// Optional image imports (add later)
 
-//This is a stupid naming MATILDA!!!
+
+
 import Hero from "../images/thesis/apps.png"
+import Base44 from "../images/thesis/Base44.png"
+import FigmaMake from "../images/thesis/FigmaMake1.png"
+import GoogleAI from "../images/thesis/GoogleAI.png"
+import Lovable from "../images/thesis/Lovable.png"
+import { useState } from "react";
+
 
 
 export default function Thesis() {
+    const tools = [
+        {
+            name: "Base44",
+            image: Base44,
+            observations: [
+                "Strong visual hierarchy and polished UI",
+                "Generated the most complete feature set",
+                "Added a 'My Garden' feature that was not included in the original prompt",
+                "Demonstrated how AI can expand the scope of a solution by inferring user needs"
+            ],
+            takeaway:
+                "Added persistent storage through a 'My Garden' feature without being instructed to do so, demonstrating how AI systems actively interpret and expand user intent.",
+        },
+        {
+            name: "Google AI Studio",
+            image: GoogleAI,
+            observations: [
+                "Recognised the gardening domain and adapted the visual design accordingly",
+                "Added a Recent Scans feature for returning users",
+                "Introduced navigation and premium subscription functionality that was not requested",
+                "Demonstrated how AI can make product and business assumptions beyond the original prompt"
+            ],
+            takeaway:
+                "Generated a subscription model, navigation structure, and additional product pages without being instructed to do so, highlighting how AI systems infer business and product requirements rather than simply implementing functionality."
+        },
+
+        {
+            name: "Figma Make",
+            image: FigmaMake,
+            observations: [
+                "Most closely followed the original prompt",
+                "Clear and structured information architecture",
+                "Avoided introducing unnecessary functionality",
+                "Responded effectively to later iterations and feature requests"
+            ],
+            takeaway:
+                "Unlike the other tools, Figma Make primarily treated the prompt as a specification to implement rather than a product concept to expand. This resulted in a predictable and focused solution that required fewer revisions."
+        },
+
+        {
+            name: "Lovable",
+            image: Lovable,
+            observations: [
+                "Added a 'My Garden' feature despite it not being included in the original prompt",
+                "Created a strong visual identity and cohesive branding",
+                "Maintained a focused user flow without introducing unnecessary complexity",
+                "Balanced AI-generated initiative with adherence to the original concept"
+            ],
+            takeaway:
+                "Expanded the original concept by introducing a garden management feature while remaining close to the intended user experience. Demonstrated how AI can infer useful functionality without significantly altering the product scope."
+        },
+    ];
+    const [selectedTool, setSelectedTool] = useState(null);
+
     const navigate = useNavigate();
     return (
         <div className="min-h-screen bg-black to-white text-white">
@@ -36,7 +96,7 @@ export default function Thesis() {
                             software together, and how control and decision-making unfold during that process.
                         </p>
 
-                        <p className="text-gray-500 text-sm max-w-xl">
+                        <p className="text-gray-400 text-sm max-w-xl">
                             To explore this, participants were asked to create applications they wanted to build,
                             while their actions and decisions were observed in real time.
                         </p>
@@ -76,6 +136,73 @@ export default function Thesis() {
                         <p className="text-gray-300 leading-relaxed">
                             How do people maintain a sense of control and make decisions
                             when working with AI systems that can act and generate on their own?
+                        </p>
+                    </section>
+                    {/* PRE-STUDY */}
+                    <section className="space-y-6">
+                        <h2 className="text-2xl font-semibold">Pre-Study: Comparing AI Development Tools</h2>
+
+                        <p className="text-gray-300 leading-relaxed">
+                            Before conducting the main study, I carried out a pre-study to better understand
+                            how different AI-powered development tools interpret and implement the same user intent.
+                        </p>
+
+                        <p className="text-gray-300 leading-relaxed">
+                            Using an identical prompt, I built the same application across four AI development
+                            platforms and compared the resulting interfaces, workflows, functionality and design decisions.
+                        </p>
+
+                        <p className="text-gray-300 leading-relaxed">
+                            The goal was not to determine which tool performed best, but to explore how AI systems
+                            translate user intent into software and how those differences might affect the user experience.
+                        </p>
+                    </section>
+                    <div className="grid md:grid-cols-2 gap-6">
+                        {tools.map((tool) => (
+                            <div
+                                key={tool.name}
+                                onClick={() => setSelectedTool(tool)}
+                                className="cursor-pointer bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-purple-400/30 hover:scale-[1.01] transition-all duration-300"
+                            >
+                                {/* Image */}
+                                <div className="bg-black p-4">
+                                    <img
+                                        src={tool.image}
+                                        alt={tool.name}
+                                        className="w-full h-auto rounded-lg object-cover"
+                                    />
+                                </div>
+
+                                <div className="p-5 space-y-4">
+                                    <h3 className="text-lg font-semibold">
+                                        {tool.name}
+                                    </h3>
+
+
+
+                                    <ul className="space-y-1 text-sm text-gray-300">
+                                        {tool.observations.map((item) => (
+                                            <li key={item}>• {item}</li>
+
+                                        ))}
+
+                                    </ul>
+                                    <p className="text-sm text-purple-300 leading-relaxed">
+                                        {tool.takeaway}
+                                    </p>
+
+                                </div>
+
+                            </div>
+                        ))}
+                    </div>
+
+
+                    <section className="space-y-4">
+                        <p className="text-gray-400 text-sm">
+                            All four applications were generated from the exact same prompt.
+                            Despite identical instructions, the tools produced notably different
+                            design patterns, workflows, implementations and feature priorities.
                         </p>
                     </section>
 
@@ -208,6 +335,52 @@ export default function Thesis() {
 
                 </div>
             </div>
+            {selectedTool && (
+                <div
+                    className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-6"
+                    onClick={() => setSelectedTool(null)}
+                >
+                    <div
+                        className="bg-zinc-900 border border-white/10 rounded-3xl max-w-5xl w-full max-h-[90vh] overflow-y-auto p-8 relative"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        <button
+                            onClick={() => setSelectedTool(null)}
+                            className="absolute right-6 top-4 text-3xl text-gray-400 hover:text-white"
+                        >
+                            ×
+                        </button>
+
+                        <h2 className="text-3xl font-bold mb-6">
+                            {selectedTool.name}
+                        </h2>
+
+                        <img
+                            src={selectedTool.image}
+                            alt={selectedTool.name}
+                            className="w-full h-auto rounded-lg object-cover"
+                        />
+
+                        <h3 className="text-xl font-semibold mb-3">
+                            Key Observations
+                        </h3>
+
+                        <ul className="space-y-2 text-gray-300 mb-6">
+                            {selectedTool.observations.map((item) => (
+                                <li key={item}>• {item}</li>
+                            ))}
+                        </ul>
+
+                        <h3 className="text-xl font-semibold mb-3">
+                            Research Takeaway
+                        </h3>
+
+                        <p className="text-purple-300 leading-relaxed">
+                            {selectedTool.takeaway}
+                        </p>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }
