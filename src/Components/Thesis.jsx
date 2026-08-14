@@ -198,18 +198,38 @@ export default function Thesis() {
                     </div>
 
 
-                    <section className="space-y-4">
-                        <p className="text-gray-400 text-sm">
-                            All four applications were generated from the exact same prompt.
-                            Despite identical instructions, the tools produced notably different
-                            design patterns, workflows, implementations and feature priorities.
-                        </p>
+
+                    <section className="mt-12">
+                        <div className="bg-purple-500/10 border border-purple-500/20 rounded-2xl p-8">
+
+                            <h2 className="text-2xl font-semibold mb-4">
+                                Pre-Study Summary
+                            </h2>
+
+                            <p className="text-gray-300 leading-relaxed mb-4">
+                                Using the same prompt across four AI-powered development tools
+                                produced four noticeably different applications.
+                            </p>
+
+                            <p className="text-gray-300 leading-relaxed mb-4">
+                                While all systems successfully identified the gardening domain,
+                                they varied significantly in how they interpreted user intent and
+                                expanded the product concept.
+                            </p>
+
+                            <p className="text-purple-300 leading-relaxed font-medium">
+                                The pre-study demonstrated that AI tools do not simply generate software.
+                                They interpret intent, make decisions, and shape the resulting product
+                                in different ways.
+                            </p>
+
+                        </div>
                     </section>
 
 
                     {/* APPROACH */}
                     <section className="space-y-4">
-                        <h2 className="text-2xl font-semibold">Approach</h2>
+                        <h2 className="text-2xl font-semibold">Main Study Method </h2>
 
                         <p className="text-gray-300 leading-relaxed">
                             Participants were asked to create an application they wanted to build
@@ -354,30 +374,36 @@ export default function Thesis() {
                         <h2 className="text-3xl font-bold mb-6">
                             {selectedTool.name}
                         </h2>
+                        <div className="px-4 pt-6">
+                            <img
+                                src={selectedTool.image}
+                                alt={selectedTool.name}
+                                className="w-full h-auto rounded-lg object-cover"
 
-                        <img
-                            src={selectedTool.image}
-                            alt={selectedTool.name}
-                            className="w-full h-auto rounded-lg object-cover"
-                        />
+                            />
 
-                        <h3 className="text-xl font-semibold mb-3">
-                            Key Observations
-                        </h3>
+                            <h3 className="text-xl font-semibold mt-4 mb-4">
+                                Key Observations
+                            </h3>
 
-                        <ul className="space-y-2 text-gray-300 mb-6">
-                            {selectedTool.observations.map((item) => (
-                                <li key={item}>• {item}</li>
-                            ))}
-                        </ul>
 
-                        <h3 className="text-xl font-semibold mb-3">
-                            Research Takeaway
-                        </h3>
+                            <ul className="space-y-4 text-gray-300 mb-6">
+                                {selectedTool.observations.map((item) => (
+                                    <li key={item}>• {item}</li>
+                                ))}
+                            </ul>
+                        </div>
+                        <div className="bg-white/5 rounded-2xl p-6 mt-6">
 
-                        <p className="text-purple-300 leading-relaxed">
-                            {selectedTool.takeaway}
-                        </p>
+
+                            <h3 className="text-xl font-semibold mt-8 mb-4">
+                                Research Takeaway
+                            </h3>
+
+                            <p className="text-purple-300 leading-relaxed">
+                                {selectedTool.takeaway}
+                            </p>
+                        </div>
                     </div>
                 </div>
             )}
