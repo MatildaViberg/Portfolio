@@ -31,7 +31,7 @@ const SocialLinks = () => {
           Resume ↗ <BsFillPersonLinesFill size={30} />
         </>
       ),
-      href: "/CVMatildaViberg.pdf",
+      href: "/CV_Matilda_Viberg_English.pdf",
       style: "rounded-br-md",
       target: "_blank",
       rel: "noopener noreferrer",
